@@ -2,26 +2,165 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  background-color: #ddd8ff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.background-image {
+  background-image: url('../public/Card/background.webp');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.background-imageinner {
+  background-image: url('../public/cards/rightcard.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.steps-image {
+  background-image: url('../public/cards/steps.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+/* SocialLinks.css */
+
+.social-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-link-tile {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.otp-input {
+  width: 100%;
+}
+.otp-input:focus {
+  border-color: #4F46E5;
+}
+.dots {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.input:focus::placeholder {
+  color: transparent;
+}
+.digit-input {
+  border: none;
+  border-bottom: 2px solid #d1d5db;
+  margin-right: -2px;
+  z-index: 10;
+}
+.digit-input:focus {
+  border-bottom: 2px solid transparent;
+}
+.digit-container {
+  display: inline-block;
+  border-bottom: 2px solid #d1d5db;
+}
+
+
+
+
+/* navbar */
+.sidebar {
+  transition: width 0.3s;
+  overflow-x: hidden;
+}
+.sidebar:hover {
+  width: 16rem;
+}
+.sidebar-icon-only .sidebar-text {
+  display: none;
+}
+.sidebar:hover .sidebar-text {
+  display: initial;
+}
+
+.sidebar-bottom {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+
+
+.top-navbar {
+  transition: margin-left 0.5s;
+}
+.sidebar:hover + .top-navbar {
+  margin-left: 200px;
+}
+
+.adminBgImage{
+  background-image: url('../public/admin/card.webp');
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position:left ;
+}
+.bg{
+  background-image: url('../public/circle.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center ;
+
+}
+
+
+.input-prefix {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  /* border-gray-300 */
+  border-radius: 0.375rem;
+  /* rounded */
+}
+
+.input-prefix-text {
+  padding: 0.5rem 0.75rem;
+  /* p-2 px-3 */
+  white-space: nowrap;
+  color: #acacac;
+  background-color: transparent;
+}
+
+.input-field {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  /* p-2 px-3 */
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+
+.portfolio:hover {
+  background: linear-gradient(90deg, rgb(90, 71, 60) 0%, rgb(88, 65, 78) 42.88%, rgb(77, 69, 100) 94.62%);
 }
