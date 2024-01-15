@@ -15,6 +15,10 @@ export default function Home() {
       <Link href="/home" className="text-pink-600 mx-2">
         click here
       </Link>
+      | For OTP
+      <Link href="/otp" className="text-pink-600 mx-2">
+        click here
+      </Link>
     </main>
   );
 }
