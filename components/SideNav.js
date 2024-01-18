@@ -17,6 +17,7 @@ import Jobs from "/public/admin/svgexport-10.svg"; // import the other icon
 import Plus from "/public/admin/svgexport-1.svg"; // import the other icon
 import Payment from "/public/admin/svgexport-13.svg"; // import the other icon
 import next from "/public/Navbar/next.svg";
+import Link from "next/link";
 
 const SideNav = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -30,7 +31,7 @@ const SideNav = () => {
     <div>
       <div className="min-h-screen  flex overflow-hidden">
         <div
-          className={`fixed z-20 min-h-screen bg-[#13161e] pt-6 pb-6 transition-all duration-300 linear  ${
+          className={` z-20 min-h-screen bg-[#13161e] pt-6 pb-6  linear absolute  transition-all transform duration-500 ease-in-out  ${
             isHovered || isFixed ? "w-72" : "w-[78px]"
           }`}
           onMouseEnter={() => setIsHovered(true)}
@@ -168,7 +169,7 @@ const SideNav = () => {
                   }`}
                 >
                   <div className="justify-between items-center w-full gap-32 flex">
-                    <div className="text-md font-medium text-white ">Jobs</div>
+                    <Link href="/opportunities"><div className="text-md font-medium text-white ">Jobs</div></Link>
                     <Image alt="logo" src={Plus} className="h-4 w-4 " />
                   </div>
                 </div>
