@@ -9,7 +9,7 @@ const WalletPage = () => {
         <div className="p-2">
           <div className="mx-auto">
             <div className="bg-white p-3 rounded-3xl border">
-              <Image src={wallet} alt="wallet" height={300} />
+              <Image src={wallet} alt="wallet" height={350} />
               <button className="py-3  justify-center w-full hover:bg-[#363e4f] mt-2 bg-black text-white rounded-3xl mb-6">
                 Add An Account
               </button>
@@ -54,17 +54,26 @@ const WalletPage = () => {
         </div>
       </div>
       <div className="w-3/4 flex justify-center">
-        <div className="max-w-md text-center">
-        <Image src={bg} alt="bg" className="object-cover"/>
-        <h2 className="text-2xl font-semibold">
-        You&apos;re on your way to getting paid!
-        </h2>
-        <h3 className="text-lg my-5">
-        You currently don&apos;t have any transactions. Once you start working on paid projects, all of your transactions will appear here.
-        </h3>
-        <button className="font-semibold hover:border-b-2 border-yellow-400">
+        <div className="max-w-lg text-center">
+          <div className="w-full justify-center flex">
+            <Image
+              src={bg}
+              alt="bg"
+              width={350}
+              height={350}
+              className="object-cover"
+            />
+          </div>
+          <h2 className="text-2xl font-semibold">
+            You&apos;re on your way to getting paid!
+          </h2>
+          <h3 className="text-md my-5">
+            You currently don&apos;t have any transactions. Once you start
+            working on paid projects, all of your transactions will appear here.
+          </h3>
+          <button className="font-semibold hover:border-b-2 border-yellow-400">
             Need some help?
-        </button>
+          </button>
         </div>
       </div>
     </div>
