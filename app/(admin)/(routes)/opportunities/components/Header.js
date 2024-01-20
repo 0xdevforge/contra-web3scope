@@ -22,8 +22,8 @@ function Category({ image, label, isSelected, onClick }) {
       } transition-all duration-500 ease-in-out`}
       onClick={onClick}
     >
-      <span className="flex flex-col items-center gap-2">
-        <Image src={image} alt={label} />
+      <span className="flex flex-col items-center gap-y-2 text-xs tracking-tight">
+        <Image src={image} alt={label} width={15} height={15} />
         {label}
       </span>
     </div>
@@ -44,7 +44,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="flex w-full gap-2 cursor-pointer border-b-2 pb-1">
+    <header className="flex w-full  cursor-pointer  border-b-2 pb-1">
       {categories.map((category, index) => (
         <>
           <Category
@@ -54,7 +54,7 @@ export default function Header() {
             isSelected={selectedCategory === category.label}
             onClick={() => setSelectedCategory(category.label)}
           />
-          <div className="flex">
+          <div className="flex text-xs">
             {category.label === "All Categories" && (
               <div className="px-2  border-l-2 mb-5"></div>
             )}

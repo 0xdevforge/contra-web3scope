@@ -168,10 +168,14 @@ const SideNav = () => {
                     isHovered || isFixed ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <div className="justify-between items-center w-full gap-32 flex">
-                    <Link href="/opportunities"><div className="text-md font-medium text-white ">Jobs</div></Link>
-                    <Image alt="logo" src={Plus} className="h-4 w-4 " />
-                  </div>
+                  <Link href="/opportunities">
+                    <div className="justify-between items-center w-full gap-32 flex">
+                      <div className="text-md font-medium text-white ">
+                        Jobs
+                      </div>
+                      <Image alt="logo" src={Plus} className="h-4 w-4 " />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

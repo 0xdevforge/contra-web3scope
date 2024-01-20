@@ -21,15 +21,17 @@ const Card = ({
       <div className="border  rounded-3xl p-6">
         <div className="flex items-start w-full justify-between">
           {" "}
-          <div className="flex items-center space-x-6 mb-4">
+          <div className="flex items-start space-x-6 mb-4">
             <Image
               className="h-12 w-12 rounded-full"
               src={all}
               alt="Profile picture"
             />
             <div>
-              <p className="text-lg text-gray-700 font-semibold">{name}</p>
-              <p className="text-sm text-gray-500">Hiring as an {position}</p>
+              <p className="text-sm text-gray-500">{position}</p>
+              <h2 className="text-2xl text-gray-800 font-semibold mb-4">
+                {role}
+              </h2>
             </div>
           </div>
           <div className="flex items-center bg-[#f2f4f7] px-2 py-2 rounded-2xl text-xs">
@@ -37,7 +39,6 @@ const Card = ({
             <span className="text-[#4a5264] ml-1 ">Posted {ago}</span>
           </div>
         </div>
-        <h2 className="text-2xl text-gray-800 font-semibold mb-4">{role}</h2>
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2 font-medium">
             <span className="text-sm text-gray-500 gap-4 flex mr-3 ">
